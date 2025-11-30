@@ -2,9 +2,15 @@
 
 This extension add Fluent Mapping feature to SqlSugar.
 
-It allows you to configure entity mappings using a fluent API, similar to other ORM Fluent API for model configuration like EF, NHibernate, etc.
+## Overview
+### Supported SDKs
+Supported SDKs: .NET Core 6 onwards is supported.
 
-My main reason to use it it's because I need to map entities without using attributes, keeping my entity classes clean and separated from mapping concerns.
+
+### What is SqlSugar.FluentMapping?
+SqlSugar.FluentMapping allows you to configure entity mappings using a fluent API, similar to other ORM Fluent API for model configuration like EF, NHibernate, etc.
+
+The main goal is to map entities without using attributes, keeping entity classes clean and separated from mapping concerns.
 
 It follows the SqlSugar conventions and it's easy to use. Please refer to the examples below to get started or check SQLSugar documentation for more details about SqlSugar features.
 
