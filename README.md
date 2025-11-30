@@ -42,7 +42,7 @@ namespace My.Domain.Entities
 }
 ```
 
-### How to map entities with Fluent Mapping
+### Step 1 - Create map classes to map entities with Fluent Mapping
 ```csharp
 public class CustomerMap : EntityBuilder<Customer>
 {
@@ -71,7 +71,7 @@ public class CustomerMap : EntityBuilder<Customer>
 }   
 ```
 
-### How to register Fluent Mappings
+### Step 2 - Add map classes & register Fluent Mappings
 ```csharp
 using SqlSugar;
 using SqlSugar.FluentMapping;
@@ -86,7 +86,7 @@ var db = new SqlSugarClient(new ConnectionConfig()
 
 
 // Register Fluent Mappings
-db.ApplyFluentMapping(new CustomerMap());
+db.ApplyFluentMapping(new CustomerMap(), new UserMap(), new EmailMap());
 ```
 
 
