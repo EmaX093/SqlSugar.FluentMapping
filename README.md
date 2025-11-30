@@ -28,7 +28,7 @@ Install-Package SqlSugar.FluentMapping
 
 ### Example model class
 ```csharp
-namespace Certero.Microservicios.Domain.Entities
+namespace My.Domain.Entities
 {
     public class Customer
     {
