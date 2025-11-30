@@ -13,7 +13,7 @@ All contributions and feedback are welcome. Feel free to open issues or submit p
 ❤️ With love from Buenos Aires, Argentina ❤️
  
 ## Installation
-You can install the SqlSugar.FluentMapping package via NuGet Package Manager Console nor Package Manager UI.
+You can install the SqlSugar.FluentMapping package via NuGet Package Manager Console or Package Manager UI.
 ```
 Install-Package SqlSugar.FluentMapping
 ```
