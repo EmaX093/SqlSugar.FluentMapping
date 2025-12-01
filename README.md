@@ -1,14 +1,19 @@
 ﻿# SqlSugar.FluentMapping
 
-This extension add Fluent Mapping feature to SqlSugar.
+This extension add Fluent Mapping feature to SqlSugar ORM.
 
 SqlSugar ORM
 https://github.com/DotNetNext/SqlSugar
 
+SqlSugar Documentation (CN)
+https://www.donet5.com/home/doc
+
+SqlSugar Documentation (EN / Partial)
+https://github.com/DotNetNext/SqlSugar/wiki
+
 ## Overview
 ### Supported SDKs
 Supported SDKs: .NET Core 6 onwards is supported.
-
 
 ### What is SqlSugar.FluentMapping?
 SqlSugar.FluentMapping allows you to configure entity mappings using a fluent API, similar to other ORM Fluent API for model configuration like EF, NHibernate, etc.
