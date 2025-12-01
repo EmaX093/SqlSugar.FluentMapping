@@ -12,7 +12,7 @@
 	<Version>1.0.3</Version>
   </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>
     <None Remove="README.md" />
   </ItemGroup>
 
@@ -21,6 +21,8 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+
+  <!-- Exclude test sources so they are not compiled into the main library project -->
 
   <ItemGroup>
     <PackageReference Include="SqlSugarCore" Version="5.1.4.210" />

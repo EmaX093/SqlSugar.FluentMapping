@@ -51,7 +51,7 @@ namespace SqlSugar.FluentMapping
         }
 
         /// <summary>
-        /// The property is identity
+        /// Is a self-increment column. If Oracle 12+ is enabled, see documentation: Oracle. For Oracle 11 or later, set the OracleSequenceName and use the value as the automatic increment.
         /// </summary>
         /// <returns></returns>
         public MapPropertyBuilder IsIdentity()
@@ -113,7 +113,7 @@ namespace SqlSugar.FluentMapping
         }
 
         /// <summary>
-        /// Ignore this property while inserting
+        /// This column is not processed during insert operation. It is valid for the database default value
         /// </summary>
         /// <returns></returns>
         public MapPropertyBuilder IsOnlyIgnoredAtInsert()
