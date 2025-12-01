@@ -7,9 +7,9 @@
     }
     public class EntityMappingWrapper<TEntity> : IEntityMapping
     {
-        private readonly EntityBuilder<TEntity> _inner;
+        private readonly EntityMapBuilder<TEntity> _inner;
 
-        public EntityMappingWrapper(EntityBuilder<TEntity> inner)
+        public EntityMappingWrapper(EntityMapBuilder<TEntity> inner)
         {
             _inner = inner;
         }
@@ -20,7 +20,7 @@
             //_inner.SetEntityColumnInfoInstance(((EntityTypeBuilder<TEntity>)builder)._entityColumnInfo!);
             //_inner.SetEntityInstance(((EntityTypeBuilder<TEntity>)builder)._entityInfo!);
             
-            _inner.Configure((EntityTypeBuilder<TEntity>)builder);
+            _inner.Configure((EntityMapTypeBuilder<TEntity>)builder);
         }
     }
 
@@ -29,8 +29,8 @@
     /// Abstract base class for entity builders
     /// </summary>
     /// <typeparam name="T">Target class</typeparam>
-    public abstract class EntityBuilder<T>
+    public abstract class EntityMapBuilder<T>
     {
-        public abstract void Configure(EntityTypeBuilder<T> builder);   
+        public abstract void Configure(EntityMapTypeBuilder<T> builder);   
     }
 }

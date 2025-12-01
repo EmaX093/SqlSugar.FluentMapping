@@ -3,22 +3,22 @@
 namespace SqlSugar.FluentMapping
 {
 
-    public class EntityTypeBuilder<T>
+    public class EntityMapTypeBuilder<T>
     {
         private readonly EntityInfo? _entityInfo;
         private readonly EntityColumnInfo? _entityColumnInfo;
 
-        public EntityTypeBuilder(EntityInfo entity)
+        public EntityMapTypeBuilder(EntityInfo entity)
         {
             _entityInfo = entity;
         }
 
-        public EntityTypeBuilder(EntityColumnInfo entityColumnInfo)
+        public EntityMapTypeBuilder(EntityColumnInfo entityColumnInfo)
         {
             _entityColumnInfo = entityColumnInfo;
         }
 
-        public EntityTypeBuilder<T> ToTable(string tableName)
+        public EntityMapTypeBuilder<T> ToTable(string tableName)
         {
             if (_entityInfo != null)
             {
@@ -28,7 +28,7 @@ namespace SqlSugar.FluentMapping
             return this;
         }
 
-        public PropertyBuilder Property(Expression<Func<T, object>> expression)
+        public MapPropertyBuilder Property(Expression<Func<T, object>> expression)
         {
             // TODO: keep for a while, but remove later
             /*if (_entityInfo != null && _entityInfo.Columns != null)
@@ -43,12 +43,12 @@ namespace SqlSugar.FluentMapping
             {
                 if (_entityColumnInfo.PropertyName == GetPropertyName(expression))
                 {
-                    return new PropertyBuilder(_entityColumnInfo);
+                    return new MapPropertyBuilder(_entityColumnInfo);
                 }
             }
 
             // otherwise return a dummy builder
-            return new PropertyBuilder();
+            return new MapPropertyBuilder();
         }
 
         private static string GetPropertyName(Expression<Func<T, object>> expr)

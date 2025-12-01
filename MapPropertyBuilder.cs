@@ -4,14 +4,14 @@ namespace SqlSugar.FluentMapping
     /// <summary>
     /// Property builder for configuring entity properties
     /// </summary>
-    public class PropertyBuilder
+    public class MapPropertyBuilder
     {
         private readonly EntityColumnInfo? _column;
 
         /// <summary>
         /// Dummy constructor
         /// </summary>
-        public PropertyBuilder()
+        public MapPropertyBuilder()
         {
             _column = null;
         }
@@ -20,7 +20,7 @@ namespace SqlSugar.FluentMapping
         /// Property builder constructor
         /// </summary>
         /// <param name="column">Column from table</param>
-        public PropertyBuilder(EntityColumnInfo column)
+        public MapPropertyBuilder(EntityColumnInfo column)
         {
             _column = column;
         }
@@ -30,7 +30,7 @@ namespace SqlSugar.FluentMapping
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public PropertyBuilder ColumnName(string name)
+        public MapPropertyBuilder ColumnName(string name)
         {
             if (_column != null)
                 _column.DbColumnName = name;
@@ -42,7 +42,7 @@ namespace SqlSugar.FluentMapping
         /// The property is primary key
         /// </summary>
         /// <returns></returns>
-        public PropertyBuilder IsPrimaryKey()
+        public MapPropertyBuilder IsPrimaryKey()
         {
             if (_column != null)
                 _column.IsPrimarykey = true;
@@ -54,7 +54,7 @@ namespace SqlSugar.FluentMapping
         /// The property is identity
         /// </summary>
         /// <returns></returns>
-        public PropertyBuilder IsIdentity()
+        public MapPropertyBuilder IsIdentity()
         {
             if (_column != null)
                 _column.IsIdentity = true;
@@ -67,7 +67,7 @@ namespace SqlSugar.FluentMapping
         /// </summary>
         /// <param name="length"></param>
         /// <returns></returns>
-        public PropertyBuilder HasMaxLength(int length)
+        public MapPropertyBuilder HasMaxLength(int length)
         {
             if (_column != null)
                 _column.Length = length;
@@ -80,7 +80,7 @@ namespace SqlSugar.FluentMapping
         /// </summary>
         /// <param name="nullable"></param>
         /// <returns></returns>
-        public PropertyBuilder IsNullable()
+        public MapPropertyBuilder IsNullable()
         {
             if (_column != null)
                 _column.IsNullable = true;
@@ -92,7 +92,7 @@ namespace SqlSugar.FluentMapping
         /// The property is not nullable
         /// </summary>
         /// <returns></returns>
-        public PropertyBuilder IsNotNull()
+        public MapPropertyBuilder IsNotNull()
         {
             if (_column != null)
                 _column.IsNullable = false;
@@ -104,7 +104,7 @@ namespace SqlSugar.FluentMapping
         /// Ignore this property always (not mapped to any table column)
         /// </summary>
         /// <returns></returns>
-        public PropertyBuilder IsIgnore()
+        public MapPropertyBuilder IsIgnore()
         {
             if (_column != null)
                 _column.IsIgnore = true;
@@ -116,7 +116,7 @@ namespace SqlSugar.FluentMapping
         /// Ignore this property while inserting
         /// </summary>
         /// <returns></returns>
-        public PropertyBuilder IsOnlyIgnoreInsert()
+        public MapPropertyBuilder IsOnlyIgnoreInsert()
         {
             if (_column != null)
                 _column.IsOnlyIgnoreInsert = true;
@@ -128,7 +128,7 @@ namespace SqlSugar.FluentMapping
         /// Ignore this property while updating
         /// </summary>
         /// <returns></returns>
-        public PropertyBuilder IsOnlyIgnoreUpdate()
+        public MapPropertyBuilder IsOnlyIgnoreUpdate()
         {
             if (_column != null)
                 _column.IsOnlyIgnoreUpdate = true;
@@ -141,7 +141,7 @@ namespace SqlSugar.FluentMapping
         /// </summary>
         /// <param name="description"></param>
         /// <returns></returns>
-        public PropertyBuilder ColumnDescription(string description)
+        public MapPropertyBuilder ColumnDescription(string description)
         {
             if (_column != null)
                 _column.ColumnDescription = description;

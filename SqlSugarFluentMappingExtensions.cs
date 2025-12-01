@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace SqlSugar.FluentMapping
 {
-    public static class SqlSugarFluentMapping
+    public static class SqlSugarFluentMappingExtensions
     {
         // Cache: key = (entityClrType, ctorParamType) -> factory: object param -> EntityTypeBuilder<T> as object
         private static readonly ConcurrentDictionary<(Type, Type), Func<object, object>> s_builderFactories = new();
@@ -74,7 +74,7 @@ namespace SqlSugar.FluentMapping
         private static Func<object, object> CreateFactoryFor(Type entityClrType, Type? runtimeArgType)
         {
             // build the closed generic builder type
-            var builderType = typeof(EntityTypeBuilder<>).MakeGenericType(entityClrType);
+            var builderType = typeof(EntityMapTypeBuilder<>).MakeGenericType(entityClrType);
 
             // find a constructor to use. Prefer one whose parameter type is assignable from the runtimeArgType (if provided).
             var ctors = builderType.GetConstructors();
