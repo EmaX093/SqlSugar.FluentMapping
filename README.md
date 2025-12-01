@@ -47,9 +47,9 @@ namespace My.Domain.Entities
 
 ### Step 1 - Create map classes to map entities with Fluent Mapping
 ```csharp
-public class CustomerMap : EntityBuilder<Customer>
+public class CustomerMap : EntityMapBuilder<Customer>
 {
-    public override void Configure(EntityTypeBuilder<Customer> builder)
+    public override void Configure(EntityMapTypeBuilder<Customer> builder)
     {
         builder.ToTable("clientes");   // SE EJECUTA A TIEMPO
 
