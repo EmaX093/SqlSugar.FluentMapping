@@ -104,7 +104,7 @@ namespace SqlSugar.FluentMapping
         /// Ignore this property always (not mapped to any table column)
         /// </summary>
         /// <returns></returns>
-        public MapPropertyBuilder IsIgnore()
+        public MapPropertyBuilder Ignore()
         {
             if (_column != null)
                 _column.IsIgnore = true;
@@ -116,7 +116,7 @@ namespace SqlSugar.FluentMapping
         /// Ignore this property while inserting
         /// </summary>
         /// <returns></returns>
-        public MapPropertyBuilder IsOnlyIgnoreInsert()
+        public MapPropertyBuilder IsOnlyIgnoredAtInsert()
         {
             if (_column != null)
                 _column.IsOnlyIgnoreInsert = true;
@@ -128,7 +128,7 @@ namespace SqlSugar.FluentMapping
         /// Ignore this property while updating
         /// </summary>
         /// <returns></returns>
-        public MapPropertyBuilder IsOnlyIgnoreUpdate()
+        public MapPropertyBuilder IsOnlyIgnoredAtUpdate()
         {
             if (_column != null)
                 _column.IsOnlyIgnoreUpdate = true;
