@@ -59,16 +59,16 @@ public class CustomerMap : EntityBuilder<Customer>
             .IsIdentity();
 
         builder.Property(x => x.BusinessName)
-                .ColumnName("razon_social");
+            .ColumnName("razon_social");
 
         builder.Property(x => x.IsActive)
             .ColumnName("habilitado");
 
         builder.Property(x => x.Subscription)
-            .IsIgnore();
+            .Ignore();
 
         builder.Property(x => x.PrepaidPacks)
-            .IsIgnore();
+            .Ignore();
 
     }
 }   
@@ -88,7 +88,7 @@ var db = new SqlSugarClient(new ConnectionConfig()
 });
 
 
-// Register Fluent Mappings
+// Register Fluent Mappings to SqlSugar
 db.ApplyFluentMapping(new CustomerMap(), new UserMap(), new EmailMap());
 ```
 
