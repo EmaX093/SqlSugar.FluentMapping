@@ -2,14 +2,9 @@
 
 This extension add Fluent Mapping feature to SqlSugar ORM.
 
-SqlSugar ORM
-https://github.com/DotNetNext/SqlSugar
-
-SqlSugar Documentation (CN)
-https://www.donet5.com/home/doc
-
-SqlSugar Documentation (EN / Partial)
-https://github.com/DotNetNext/SqlSugar/wiki
+- SqlSugar ORM: https://github.com/DotNetNext/SqlSugar
+- SqlSugar Documentation (CN): https://www.donet5.com/home/doc
+- SqlSugar Documentation (EN / Partial): https://github.com/DotNetNext/SqlSugar/wiki
 
 ## Overview
 ### Supported SDKs
