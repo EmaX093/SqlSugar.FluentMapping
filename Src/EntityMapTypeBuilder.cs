@@ -28,7 +28,7 @@ namespace SqlSugar.FluentMapping
             return this;
         }
 
-        public MapPropertyBuilder Property(Expression<Func<T, object>> expression)
+        public MapPropertyBuilder<T> Property(Expression<Func<T, object>> expression)
         {
             // TODO: keep for a while, but remove later
             /*if (_entityInfo != null && _entityInfo.Columns != null)
@@ -43,12 +43,12 @@ namespace SqlSugar.FluentMapping
             {
                 if (_entityColumnInfo.PropertyName == GetPropertyName(expression))
                 {
-                    return new MapPropertyBuilder(_entityColumnInfo);
+                    return new MapPropertyBuilder<T>(_entityColumnInfo);
                 }
             }
 
             // otherwise return a dummy builder
-            return new MapPropertyBuilder();
+            return new MapPropertyBuilder<T>();
         }
 
         private static string GetPropertyName(Expression<Func<T, object>> expr)

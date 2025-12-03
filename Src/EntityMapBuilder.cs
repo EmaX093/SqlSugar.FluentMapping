@@ -31,6 +31,6 @@
     /// <typeparam name="T">Target class</typeparam>
     public abstract class EntityMapBuilder<T>
     {
-        public abstract void Configure(EntityMapTypeBuilder<T> builder);   
+        public abstract void Configure(EntityMapTypeBuilder<T> builder);
     }
 }
